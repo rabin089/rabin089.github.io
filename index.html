@@ -109,6 +109,79 @@
   transform: scale(1.1);
 }
 
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+  height: 100%;
+}
+
+.project-card .meta {
+  color: #ffbd39;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-card ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.project-card li {
+  margin-bottom: 8px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tech-stack span {
+  border: 1px solid rgba(255, 189, 57, 0.35);
+  border-radius: 4px;
+  color: #ffbd39;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.heritedge-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.heritedge-shot {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 9 / 19;
+}
+
+.heritedge-shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .heritedge-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .heritedge-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 </style>
 
@@ -304,9 +377,34 @@
 		</div>
 		<br>
 		
-		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">February 2025-Present</span>
+    					<h2>Flutter Mobile App Developer</h2>
+    					<span class="position">KTM Bees, Nepal</span>
+    					<p class="mt-4">Intern / Junior developer building cross-platform mobile applications with Flutter and Dart for iOS and Android.</p>
+    					<ul>
+    						<li>Implemented Firebase Authentication, Firestore, and Cloud Storage for secure user management, real-time data syncing, and media handling.</li>
+    						<li>Used Provider and BLoC state management patterns to keep app logic scalable, maintainable, and testable.</li>
+    						<li>Integrated REST APIs, handled dynamic content, and improved app stability through debugging and performance optimization.</li>
+    					</ul>
+    				</div>
+    			</div>
 
-				
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">April 2020-January 2024</span>
+    					<h2>Production Assistant</h2>
+    					<span class="position">Chandika Print Pack, Kavre, Nepal</span>
+    					<p class="mt-4">Supported production planning, documentation, quality assurance processes, and daily operational workflows.</p>
+    					<ul>
+    						<li>Maintained accurate production records and assisted with routine documentation.</li>
+    						<li>Collaborated with team members to support efficient manufacturing schedules and operational coordination.</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
 
 		</div>
 
@@ -341,7 +439,7 @@
 
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="files/Rabin_Dulal_Resume.pdf" class="btn btn-primary py-4 px-5" target="_blank" rel="noopener">Download CV</a></p>
     			</div>
     		</div>
     	</div>
@@ -355,70 +453,62 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <p>Selected academic and software development projects built with web and mobile technologies.</p>
           </div>
         </div>
         <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="#">Web Based application to solve the problem of booking Venue </a></h3>
-                <p>Helps to digitalized the booking process.</p>
+          <div class="col-lg-8 d-flex ftco-animate">
+          	<div class="project-card">
+              <span class="meta">Featured mobile application</span>
+              <h3 class="heading mt-3">HeritEdge: Cultural Heritage Exploration and Recommendation</h3>
+              <p>HeritEdge is a hybrid Flutter mobile application created to document and promote Nepal's cultural heritage. The app helps users explore heritage sites and festivals through detailed descriptions, images, bookmarks, location-based maps, and navigation.</p>
+              <p>The system includes secure authentication, user roles, contribution review, content management, notifications, and a customizable backend for managing users, media, festivals, and heritage site information.</p>
+              <ul>
+                <li>Search and filter heritage sites and festivals by category and location.</li>
+                <li>Use fuzzy matching, Haversine distance, and rule-based recommendations to improve discovery.</li>
+                <li>Allow users to rate, review, bookmark, and contribute cultural content for admin approval.</li>
+              </ul>
+              <div class="tech-stack">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Google Maps API</span>
+                <span>BLoC</span>
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="#"></a></h3>
-                <!-- <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="" class="block-20 zoom-effect" style="background-image: url('images/');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="#"></a></h3>
-                <!-- <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> -->
+          <div class="col-lg-4 d-flex ftco-animate">
+          	<div class="project-card">
+              <span class="meta">Web application</span>
+              <h3 class="heading mt-3">Venue Booking System</h3>
+              <a href="#" class="block-20 zoom-effect mb-4" style="background-image: url('images/project1.jpg');"></a>
+              <p>A web-based application built to make venue booking simpler and more organized by digitalizing the booking workflow.</p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Web App</span>
               </div>
             </div>
           </div>
         </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <!-- <h3 class="heading"><a href="#"></a></h3> -->
-				  <!-- <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> -->
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<!-- <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"> -->
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <!-- <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3> -->
-				  <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
-				</div>
-			  </div>
-			</div>
-		 </div>
+        <div class="heritedge-gallery ftco-animate">
+          <a href="images/HeritEdge Screenshots/Screenshot 2026-06-19 193209.png" class="heritedge-shot" target="_blank" rel="noopener">
+            <img src="images/HeritEdge Screenshots/Screenshot 2026-06-19 193209.png" alt="HeritEdge mobile app home screen">
+          </a>
+          <a href="images/HeritEdge Screenshots/Screenshot 2026-06-19 193432.png" class="heritedge-shot" target="_blank" rel="noopener">
+            <img src="images/HeritEdge Screenshots/Screenshot 2026-06-19 193432.png" alt="HeritEdge heritage site listing">
+          </a>
+          <a href="images/HeritEdge Screenshots/Screenshot 2026-06-19 193522.png" class="heritedge-shot" target="_blank" rel="noopener">
+            <img src="images/HeritEdge Screenshots/Screenshot 2026-06-19 193522.png" alt="HeritEdge site details screen">
+          </a>
+          <a href="images/HeritEdge Screenshots/Screenshot 2026-06-19 193656.png" class="heritedge-shot" target="_blank" rel="noopener">
+            <img src="images/HeritEdge Screenshots/Screenshot 2026-06-19 193656.png" alt="HeritEdge map and location feature">
+          </a>
+          <a href="images/HeritEdge Screenshots/Screenshot 2026-06-19 193802.png" class="heritedge-shot" target="_blank" rel="noopener">
+            <img src="images/HeritEdge Screenshots/Screenshot 2026-06-19 193802.png" alt="HeritEdge user and content feature screen">
+          </a>
+        </div>
 	  </div>
     </section>
 
@@ -514,7 +604,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+	            <p><a href="files/Rabin_Dulal_Resume.pdf" target="_blank" rel="noopener">Rabin_Dulal_Resume.pdf</a></p>
 	          </div>
           </div>
 
@@ -529,8 +619,8 @@
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="http://www.youtube.com/@baddevil5629"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="www.linkedin.com/in/rabin-dulal-3a30a0226"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@baddevil5629"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rabin-dulal-3a30a0226"><span class="icon-linkedin"></span></a></li>  
 					  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 					  <li class="ftco-animate"><a href="https://www.facebook.com/rabin.dulal.376"><span class="icon-facebook"></span></a></li>
 				      <li class="ftco-animate"><a href="https://www.instagram.com/rabindulal9?igsh=c2h4NGRmc24yNXlu"><span class="icon-instagram"></span></a></li>
